@@ -69,7 +69,14 @@ fn main() {
     });
     builder.init();
 
-    let schedule = Schedule::from_str(&cli.cron).expect("Failed to parse cron expression");
+    let schedule = Schedule::from_str(&cli.cron);
+
+    if let Err(e) = schedule {
+        error!("Failed to parse cron expression");
+        std::process::exit(1);
+    }
+
+    let schedule = schedule.unwrap();
 
     let spinner = ProgressBar::new_spinner();
     spinner.set_style(ProgressStyle::default_spinner()
