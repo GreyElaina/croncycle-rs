@@ -1,7 +1,16 @@
 [package]
 name = "croncycle"
+description = "A simple cron job scheduler"
 version = "0.1.0"
+authors = [
+    "Elaina <GreyElaina@outlook.com>"
+]
 edition = "2021"
+license = "MIT"
+repository = "https://github.com/GreyElaina/croncycle-rs"
+keywords = ["cron", "scheduler", "job", "schedule"]
+categories = ["development-tools", "command-line-utilities"]
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
