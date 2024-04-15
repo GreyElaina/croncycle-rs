@@ -71,7 +71,7 @@ fn main() {
 
     let schedule = Schedule::from_str(&cli.cron);
 
-    if let Err(e) = schedule {
+    if let Err(_) = schedule {
         error!("Failed to parse cron expression");
         std::process::exit(1);
     }
